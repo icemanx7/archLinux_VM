@@ -7,6 +7,11 @@ This is a script to quickly install arch linux for virtualbox. It adds the Vbox 
 To run this either copy it onto the install media using another pc with ssh and scp or rebuild the arch linux iso with this script located on it. Follow the Arch Wiki guide Remastering the iso. 
 I can verify that it works. 
 
+### TIPS
+
+This works very nice with the virtualbox creatitition from terminal. Which I
+will also add to the repo. 
+
 ## Caution
 
 This is not a full proof solution it is not indented for one. It is just a
