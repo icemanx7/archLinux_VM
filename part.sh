@@ -7,6 +7,8 @@ mount /dev/sda1 /mnt
 #pacstrap -i /mnt base base-devel
 genfstab -U /mnt > /mnt/etc/fstab
 
+#TODO
+#This will probably be a problem for you when since it is only english. Working on a better solution with user interaction.
 cp /etc/locale.gen /mnt/etc/
 arch-chroot /mnt /bin/bash "locale-gen"
 echo 'LANG=en_US.UTF-8' > /mnt/etc/locale.conf
