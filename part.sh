@@ -1,10 +1,10 @@
-#parted /dev/sda "mklabel msdos yes"
-#parted /dev/sda "mkpart primary ext4 1MiB 100%"
-#parted /dev/sda "set 1 boot on"
+parted /dev/sda "mklabel msdos yes"
+parted /dev/sda "mkpart primary ext4 1MiB 100%"
+parted /dev/sda "set 1 boot on"
 
-#mkfs.ext4 /dev/sda1
+mkfs.ext4 /dev/sda1
 mount /dev/sda1 /mnt 
-#pacstrap -i /mnt base base-devel
+pacstrap -i /mnt base base-devel
 genfstab -U /mnt > /mnt/etc/fstab
 
 #TODO
