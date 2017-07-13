@@ -10,6 +10,14 @@ genfstab -U /mnt > /mnt/etc/fstab
 #TODO
 #This will probably be a problem for you when since it is only english. Working on a better solution with user interaction.
 cp /etc/locale.gen /mnt/etc/
+# For this section You should run:
+# arch-chroot /mnt 
+# Then run all the commands after the /mnt of the following.
+# Basically arch-chroots lets you go into your arch install and install these next things as root user.
+# The reason I ran them like this in this script was to automate the process. 
+# If you are using this script as a guide line your can ignore the:
+# arch-chroot /mnt
+# In the following lines.
 arch-chroot /mnt /bin/bash "locale-gen"
 echo 'LANG=en_US.UTF-8' > /mnt/etc/locale.conf
 arch-chroot /mnt /usr/bin/ln -s /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
