@@ -25,7 +25,7 @@ arch-chroot /mnt modprobe -a vboxguest vboxsf vboxvideo
 arch-chroot /mnt systemctl enable vboxservice
 arch-chroot /mnt pacman -S --noconfirm xfce4
 
-arch-chroot /mnt useradd -m -G wheel -s /bin/bash 
+arch-chroot /mnt useradd -m -G wheel -s /bin/bash YourUsername
 
 
 
