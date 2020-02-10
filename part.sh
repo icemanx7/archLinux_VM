@@ -4,7 +4,7 @@ parted /dev/sda "set 1 boot on"
 
 mkfs.ext4 /dev/sda1
 mount /dev/sda1 /mnt 
-pacstrap -i /mnt base base-devel
+pacstrap -i /mnt base linux linux-firmware
 genfstab -U /mnt > /mnt/etc/fstab
 
 #TODO
